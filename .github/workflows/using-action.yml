@@ -47,6 +47,7 @@ jobs:
           start: npm start
         env:
           # pass the Dashboard record key as an environment variable
+          CYPRESS_INTERNAL_ENV: staging
           CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
 
   parallel-runs-across-platforms:
@@ -82,4 +83,5 @@ jobs:
           start-windows: npm run start:ci:windows
         env:
           # pass the Dashboard record key as an environment variable
+          CYPRESS_INTERNAL_ENV: staging
           CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}

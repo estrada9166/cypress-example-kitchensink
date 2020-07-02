@@ -59,6 +59,7 @@ jobs:
       env:
         # place your secret record key at
         # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
+        CYPRESS_INTERNAL_ENV: staging
         CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
         TERM: xterm
 

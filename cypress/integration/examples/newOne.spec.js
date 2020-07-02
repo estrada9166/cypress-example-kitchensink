@@ -113,12 +113,13 @@ context('Actions', () => {
   })
 
   it('.dblclick() - double click on a DOM element', () => {
+    throw new Error('aaa')
     // https://on.cypress.io/dblclick
 
     // Our app has a listener on 'dblclick' event in our 'scripts.js'
     // that hides the div and shows an input on double click
-    cy.get('.action-div').dblclick().should('not.be.visible')
-    cy.get('.action-input-hidden').should('be.visible')
+    // cy.get('.action-div').dblclick().should('not.be.visible')
+    // cy.get('.action-input-hidden').should('be.visible')
   })
 
   it('.rightclick() - right click on a DOM element', () => {

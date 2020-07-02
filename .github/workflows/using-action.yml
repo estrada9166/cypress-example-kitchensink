@@ -49,6 +49,7 @@ jobs:
           # pass the Dashboard record key as an environment variable
           CYPRESS_INTERNAL_ENV: staging
           CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   parallel-runs-across-platforms:
     name: every OS
@@ -85,3 +86,4 @@ jobs:
           # pass the Dashboard record key as an environment variable
           CYPRESS_INTERNAL_ENV: staging
           CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

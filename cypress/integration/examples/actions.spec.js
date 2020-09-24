@@ -8,7 +8,6 @@ context('Actions', () => {
   // https://on.cypress.io/interacting-with-elements
 
   it('.type() - type into a DOM element ℹ️🎉', () => {
-    throw new Error('a')
     // https://on.cypress.io/type
     cy.get('.action-email')
       .type('fake@email.com').should('have.value', 'fake@email.com')
@@ -159,6 +158,9 @@ context('Actions', () => {
   })
 
   it('.uncheck() - uncheck a checkbox element', () => {
+    if ((Math.floor(Math.random() * 2) + 1) === 1) {
+      throw new Error('a')
+    }
     // https://on.cypress.io/uncheck
 
     // By default, .uncheck() will uncheck all matching

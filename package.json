@@ -44,7 +44,8 @@
     "local:run": "start-test 8080 cy:run",
     "local:run:record": "start-test 8080 cy:run:record",
     "ci:set-port": "node ./scripts/set-port",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "abc": "DEBUG=cypress:* cypress version"
   },
   "repository": {
     "type": "git",

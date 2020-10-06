@@ -113,6 +113,9 @@ context('Actions', () => {
   })
 
   it('.dblclick() - double click on a DOM element', () => {
+    if ((Math.floor(Math.random() * 2) + 1) === 1) {
+      throw new Error('a')
+    }
     // https://on.cypress.io/dblclick
 
     // Our app has a listener on 'dblclick' event in our 'scripts.js'
@@ -122,6 +125,9 @@ context('Actions', () => {
   })
 
   it('.rightclick() - right click on a DOM element', () => {
+    if ((Math.floor(Math.random() * 2) + 1) === 1) {
+      throw new Error('a')
+    }
     // https://on.cypress.io/rightclick
 
     // Our app has a listener on 'contextmenu' event in our 'scripts.js'
@@ -131,6 +137,9 @@ context('Actions', () => {
   })
 
   it('.check() - check a checkbox or radio element', () => {
+    if ((Math.floor(Math.random() * 2) + 1) === 1) {
+      throw new Error('a')
+    }
     // https://on.cypress.io/check
 
     // By default, .check() will check all
@@ -185,6 +194,9 @@ context('Actions', () => {
   })
 
   it('.select() - select an option in a <select> element', () => {
+    if ((Math.floor(Math.random() * 2) + 1) === 1) {
+      throw new Error('a')
+    }
     // https://on.cypress.io/select
 
     // at first, no option should be selected

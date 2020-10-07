@@ -114,7 +114,7 @@ context('Actions', () => {
 
   it('.dblclick() - double click on a DOM element', () => {
     if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
+      throw new Error('ab')
     }
     // https://on.cypress.io/dblclick
 

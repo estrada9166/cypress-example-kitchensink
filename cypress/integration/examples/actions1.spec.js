@@ -42,7 +42,6 @@ context('Actions', () => {
 
   it('.blur() - blur off a DOM element', () => {
     throw new Error('a')
-
   })
 
   it('.clear() - clears an input or textarea element', () => {

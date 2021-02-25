@@ -34,22 +34,18 @@ context('Actions', () => {
   })
 
   it('.focus() - focus on a DOM element', () => {
-    // https://on.cypress.io/focus
-    cy.get('.action-focus').focus()
-      .should('have.class', 'focus')
+    expect(42).to.equal(42)
       .prev().should('have.attr', 'style', 'color: orange;')
   })
 
   it('.blur() - blur off a DOM element', () => {
-    throw new Error('a')
-
+    // https://on.cypress.io/blur
+    cy.get('.action-blur').type('About to blur').blur()
+      .should('have.class', 'error')
+      .prev().should('have.attr', 'style', 'color: red;')
   })
 
   it('.clear() - clears an input or textarea element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
-
     // https://on.cypress.io/clear
     cy.get('.action-clear').type('Clear this text')
       .should('have.value', 'Clear this text')
@@ -58,10 +54,6 @@ context('Actions', () => {
   })
 
   it('.submit() - submit a form', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
-
     // https://on.cypress.io/submit
     cy.get('.action-form')
       .find('[type="text"]').type('HALFOFF')
@@ -71,10 +63,6 @@ context('Actions', () => {
   })
 
   it('.click() - click on a DOM element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
-
     // https://on.cypress.io/click
     cy.get('.action-btn').click()
 
@@ -123,9 +111,6 @@ context('Actions', () => {
   })
 
   it('.dblclick() - double click on a DOM element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('ab')
-    }
     // https://on.cypress.io/dblclick
 
     // Our app has a listener on 'dblclick' event in our 'scripts.js'
@@ -135,9 +120,6 @@ context('Actions', () => {
   })
 
   it('.rightclick() - right click on a DOM element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
     // https://on.cypress.io/rightclick
 
     // Our app has a listener on 'contextmenu' event in our 'scripts.js'
@@ -147,9 +129,6 @@ context('Actions', () => {
   })
 
   it('.check() - check a checkbox or radio element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
     // https://on.cypress.io/check
 
     // By default, .check() will check all
@@ -177,9 +156,6 @@ context('Actions', () => {
   })
 
   it('.uncheck() - uncheck a checkbox element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
     // https://on.cypress.io/uncheck
 
     // By default, .uncheck() will uncheck all matching
@@ -204,9 +180,6 @@ context('Actions', () => {
   })
 
   it('.select() - select an option in a <select> element', () => {
-    if ((Math.floor(Math.random() * 2) + 1) === 1) {
-      throw new Error('a')
-    }
     // https://on.cypress.io/select
 
     // at first, no option should be selected

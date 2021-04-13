@@ -44,7 +44,8 @@
     "local:run": "start-test 8080 cy:run",
     "local:run:record": "start-test 8080 cy:run:record",
     "ci:set-port": "node ./scripts/set-port",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "abc": "DEBUG=cypress:* cypress version"
   },
   "repository": {
     "type": "git",
@@ -64,7 +65,7 @@
     "@bahmutov/print-env": "1.2.0",
     "@cypress/eslint-plugin-dev": "5.0.0",
     "colon-names": "1.0.0",
-    "cypress": "4.5.0",
+    "cypress": "6.1.0",
     "eslint": "7.0.0",
     "eslint-plugin-cypress": "2.8.1",
     "eslint-plugin-json-format": "2.0.1",
@@ -81,11 +82,5 @@
   },
   "engines": {
     "node": ">=4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run lint:yaml",
-      "pre-push": "npm run lint && npm run lint:yaml"
-    }
   }
 }
